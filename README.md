@@ -6,6 +6,62 @@ Claude Code skills for relationship-focused job searching, implementing methodol
 
 Online job applications have notoriously low success rates. Research suggests 50-80% of positions are filled through networking and referrals before being publicly posted, with employee referrals accounting for 30-50% of hires despite comprising only 7% of applicants (Wanberg et al., 2020).
 
+## Practical Framework
+
+1. **Research people** whose work genuinely interests you
+2. **Build relationships** through informational conversations
+3. **Demonstrate value** through signals (portfolio, proposals, demonstrated understanding)
+4. **Apply formally** as backup/formality
+
+## Quick Start
+
+```bash
+git clone https://github.com/rhowardstone/AI-Job-Coach.git
+cd AI-Job-Coach
+
+pip install python-jobspy pandas requests
+
+# Optional
+export HUNTER_API_KEY="your_key"  # hunter.io for email verification
+
+cp toolkit/profile_template.json profile.json
+# Create .claude/CLAUDE.md with your profile
+
+claude
+```
+
+**Browser automation** (optional): Install [Playwright MCP](https://github.com/anthropics/anthropic-cookbook/tree/main/misc/mcp_playwright) or similar for form-filling - simply run /plugin once ```claude``` opens, and find Playwright.
+
+See [GETTING_STARTED.md](GETTING_STARTED.md) for complete setup guide.
+
+## Features
+
+### Scripts
+```bash
+python toolkit/scripts/job_search.py "software engineer" --location "Seattle" --min-salary 150000
+python toolkit/scripts/greenhouse_search.py stripe anthropic --keyword "engineer"
+python toolkit/scripts/email_finder.py "Jane Smith" company.com --verify
+```
+
+### Skills
+
+| Command | Description |
+|---------|-------------|
+| `/apply` | Relationship-focused application workflow |
+| `/job-search` | Multi-board job search |
+| `/job-batch` | Batch processing |
+| `/ats-review` | Resume vs job description analysis |
+| `/interview-prep` | Question generation + STAR feedback |
+| `/anti-ai-writing` | Human-sounding text guidelines |
+
+## Core Principle
+
+**Claude fills, you submit.**
+
+- Claude drafts → You send
+- Claude researches → You validate interest
+- Claude fills forms → You click submit
+
 ## Research Foundation
 
 ### Weak Tie Theory
@@ -38,62 +94,6 @@ Effective outreach follows established principles: reciprocity (offer value firs
 
 > Cialdini, R. B. (1984). *Influence: The Psychology of Persuasion*. William Morrow.
 
-## Practical Framework
-
-1. **Research people** whose work genuinely interests you
-2. **Build relationships** through informational conversations
-3. **Demonstrate value** through signals (portfolio, proposals, demonstrated understanding)
-4. **Apply formally** as backup/formality
-
-## Quick Start
-
-```bash
-git clone https://github.com/rhowardstone/AI-Job-Coach.git
-cd AI-Job-Coach
-
-pip install python-jobspy pandas requests
-
-# Optional
-export HUNTER_API_KEY="your_key"  # hunter.io for email verification
-
-cp toolkit/profile_template.json profile.json
-# Create .claude/CLAUDE.md with your profile
-
-claude
-```
-
-**Browser automation** (optional): Install [Playwright MCP](https://github.com/anthropics/anthropic-cookbook/tree/main/misc/mcp_playwright) or similar for form-filling.
-
-See [GETTING_STARTED.md](GETTING_STARTED.md) for complete setup guide.
-
-## Features
-
-### Scripts
-```bash
-python toolkit/scripts/job_search.py "software engineer" --location "Seattle" --min-salary 150000
-python toolkit/scripts/greenhouse_search.py stripe anthropic --keyword "engineer"
-python toolkit/scripts/email_finder.py "Jane Smith" company.com --verify
-```
-
-### Skills
-
-| Command | Description |
-|---------|-------------|
-| `/apply` | Relationship-focused application workflow |
-| `/job-search` | Multi-board job search |
-| `/job-batch` | Batch processing |
-| `/ats-review` | Resume vs job description analysis |
-| `/interview-prep` | Question generation + STAR feedback |
-| `/anti-ai-writing` | Human-sounding text guidelines |
-
-## Core Principle
-
-**Claude fills, you submit.**
-
-- Claude drafts → You send
-- Claude researches → You validate interest
-- Claude fills forms → You click submit
-
 ## References
 
 1. Granovetter, M. S. (1973). The Strength of Weak Ties. *American Journal of Sociology*, 78(6), 1360-1380.
@@ -105,3 +105,4 @@ python toolkit/scripts/email_finder.py "Jane Smith" company.com --verify
 ## License
 
 MIT
+

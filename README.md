@@ -1,6 +1,6 @@
 # AI Career Coach Toolkit
 
-Claude Code skills for relationship-focused job searching, implementing methodology grounded in career development research.
+Elite "career coaches" utilize well-known, long-standing research - package it as their own, and sell you "secrets" for $3,000. Instead, this repo provides Claude Code skills for relationship-focused job searching, implementing methodology grounded in career development research.
 
 ## The Problem
 
@@ -97,6 +97,7 @@ Effective outreach follows established principles: reciprocity (offer value firs
 ## License
 
 MIT
+
 
 
 

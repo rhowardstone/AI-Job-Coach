@@ -1,0 +1,65 @@
+{
+  "$schema": "history_template.json#",
+  "_description": "Track all job applications and outreach. Copy to applications/history.json",
+  "applications": [
+    {
+      "id": "example-001",
+      "company": "Example Corp",
+      "role": "Software Engineer",
+      "url": "https://example.com/jobs/123",
+      "applied_date": "2024-01-15",
+      "source": "job_search_script",
+      "status": "applied",
+      "salary_range": {
+        "min": 180000,
+        "max": 220000,
+        "currency": "USD"
+      },
+      "location": "San Francisco, CA",
+      "remote": false,
+      "outreach": [
+        {
+          "type": "cold_email",
+          "recipient": "Jane Smith",
+          "recipient_title": "Engineering Manager",
+          "sent_date": "2024-01-10",
+          "response_date": null,
+          "response_type": null,
+          "next_follow_up": "2024-01-17",
+          "notes": "Found her talk on distributed systems"
+        }
+      ],
+      "last_contact": "2024-01-15",
+      "next_action": "follow_up",
+      "next_action_date": "2024-01-29",
+      "outcome": null,
+      "notes": "Strong match for systems experience"
+    }
+  ],
+  "outreach_only": [
+    {
+      "id": "outreach-001",
+      "company": "Other Corp",
+      "person": "John Doe",
+      "person_title": "Staff Engineer",
+      "type": "informational_interview",
+      "sent_date": "2024-01-12",
+      "response_date": "2024-01-14",
+      "meeting_date": "2024-01-20",
+      "follow_up_sent": true,
+      "notes": "Discussed their ML infrastructure"
+    }
+  ],
+  "statistics": {
+    "total_applications": 1,
+    "total_outreach": 2,
+    "response_rate": 0.5,
+    "by_status": {
+      "applied": 1,
+      "interviewing": 0,
+      "rejected": 0,
+      "offer": 0,
+      "withdrawn": 0
+    }
+  }
+}

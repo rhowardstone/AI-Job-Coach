@@ -1,0 +1,16 @@
+{
+  "project": {
+    "name": "job-applications",
+    "description": "AI-powered job search toolkit implementing elite career coach methodology"
+  },
+  "permissions": {
+    "allow_playwright": true,
+    "allow_web_fetch": true,
+    "allow_web_search": true
+  },
+  "notes": {
+    "never_submit": "Claude fills forms but NEVER clicks submit - user always submits manually",
+    "never_send_email": "Claude drafts emails but NEVER sends - user always sends manually",
+    "methodology": "Based on Austin Belcak (Cultivated Culture) and Ramit Sethi frameworks"
+  }
+}

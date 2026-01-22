@@ -1,0 +1,46 @@
+# Personal data - never commit
+profile.json
+.passwords.txt
+toolkit/.env
+.env
+
+# Personal documents - NEVER commit these
+documents/
+old_stuff/
+
+# User's personal CLAUDE.md (contains personal info, compensation, etc.)
+.claude/CLAUDE.md
+
+# Application data with personal info
+applications/
+
+# Claude Code local files (personal, not shared)
+*.local.md
+CLAUDE.local.md
+.claude/CLAUDE.local.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Output files (regeneratable)
+*.csv
+job_search_*.json
+toolkit/scripts/*.json
+toolkit/scripts/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

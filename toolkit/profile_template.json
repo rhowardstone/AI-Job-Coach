@@ -1,0 +1,81 @@
+{
+  "_comment": "Copy this to profile.json and fill in your details. profile.json is gitignored.",
+
+  "personal": {
+    "name": "Your Full Name",
+    "email": "your.email@example.com",
+    "phone": "(555) 123-4567",
+    "location": {
+      "street": "123 Main St Apt 1",
+      "city": "City",
+      "state": "ST",
+      "zip": "12345",
+      "country": "United States"
+    },
+    "linkedin": "https://www.linkedin.com/in/yourprofile",
+    "github": "https://github.com/yourusername",
+    "website": ""
+  },
+
+  "education": [
+    {
+      "degree": "PhD",
+      "field": "Computer Science",
+      "school": "University Name",
+      "gpa": 4.0,
+      "start_year": 2019,
+      "end_year": 2025
+    },
+    {
+      "degree": "BS",
+      "field": "Mathematics",
+      "field_note": "Use actual degree name, not concentration",
+      "school": "University Name",
+      "gpa": 3.5,
+      "start_year": 2012,
+      "end_year": 2017
+    }
+  ],
+
+  "work_experience": [
+    {
+      "title": "Job Title",
+      "company": "Company Name",
+      "location": "City, ST",
+      "start_date": "08/2019",
+      "end_date": "12/2025",
+      "current": false,
+      "description": "Brief description of role and accomplishments"
+    }
+  ],
+
+  "demographics": {
+    "_comment": "For EEO forms - leave null to skip",
+    "gender": null,
+    "hispanic_latino": null,
+    "race_ethnicity": null,
+    "veteran_status": null,
+    "disability_status": null
+  },
+
+  "job_search": {
+    "target_titles": [
+      "Software Engineer",
+      "ML Engineer"
+    ],
+    "target_companies": [
+      "Company A",
+      "Company B"
+    ],
+    "min_salary": 150000,
+    "preferred_locations": ["Remote", "San Francisco, CA", "New York, NY"],
+    "willing_to_relocate": true,
+    "requires_sponsorship": false
+  },
+
+  "application_preferences": {
+    "how_did_you_hear": "Your standard answer for 'how did you hear about us'",
+    "salary_strategy": "Leave negotiation room - ask 85-90% of max acceptable",
+    "cover_letter_style": "Direct, technical, no buzzwords"
+  }
+}

@@ -9,7 +9,22 @@ description: Process a batch of job applications - discover roles, prepare mater
 
 ## Purpose
 
-Process a batch of job applications: discover roles, prepare materials, pre-fill forms, and present for user review.
+Process a batch of job applications using the relationship-focused methodology. This is NOT mass-applying - each role gets proper research.
+
+---
+
+## CRITICAL: This is Phase 6
+
+Per the `/apply` skill methodology, formal applications are the LAST step, not the first.
+
+**For each role in the batch, we do:**
+1. Company intel (challenges, pain points, recent news)
+2. People mapping (hiring manager + champions)
+3. Email pattern detection
+4. Outreach draft (user sends)
+5. THEN formal application (user submits)
+
+Batch processing doesn't skip steps - it parallelizes them.
 
 ---
 
@@ -23,17 +38,42 @@ Process a batch of job applications: discover roles, prepare materials, pre-fill
 
 ### Phase 2: User Selection
 1. Present batch with compensation, location, fit assessment
-2. User selects which to proceed with
+2. User selects which to proceed with (typically 3-5, not all 10)
 3. Create folders in `applications/pending/{company}_{role}_{date}/`
 
-### Phase 3: Research & Materials
+### Phase 3: Company Intel (NEW - REQUIRED)
+For each selected role:
+1. Research recent news, funding, product launches
+2. Identify challenges and pain points
+3. Find engineering blog, tech stack info
+4. Document in `notes.md`:
+   - 3-5 bullets on what they care about RIGHT NOW
+   - Why this role exists (growth? backfill? new initiative?)
+
+### Phase 4: People Mapping (NEW - REQUIRED)
+For each selected role:
+1. **Hiring Manager**: Who owns this headcount? LinkedIn search
+2. **Champions**: 2-3 employees with aligned interests (publications, talks, GitHub)
+3. **Mutual Connections**: Does user know anyone who knows them?
+4. Document in `notes.md`:
+   - Names, titles, backgrounds, LinkedIn URLs
+   - Email patterns (use `email_finder.py`)
+
+### Phase 5: Outreach Drafts (NEW - REQUIRED)
+For each selected role, draft in `outreach_draft.md`:
+1. **Informational email** to a champion (if genuine interest exists)
+2. **Or hiring manager email** (after application)
+3. Follow `/apply` skill templates - specific, about THEM, easy yes/no
+
+**User sends these - Claude NEVER sends.**
+
+### Phase 6: Materials Preparation
 1. Navigate to each job posting via Playwright
 2. Extract full job description to `notes.md`
-3. Write fit assessment
-4. Generate cover letter following anti-AI-writing guidelines
-5. Fill any application-specific questions in `responses.md`
+3. Generate cover letter following `/anti-ai-writing` guidelines
+4. Fill any application-specific questions in `responses.md`
 
-### Phase 4: Form Pre-fill
+### Phase 7: Form Pre-fill
 1. Open each application in separate Playwright tab
 2. Fill standard fields:
    - Name, email, phone, location
@@ -41,15 +81,39 @@ Process a batch of job applications: discover roles, prepare materials, pre-fill
    - Resume upload (CV PDF)
    - Cover letter (paste or upload)
 3. Leave tabs open for user review
-4. DO NOT submit - wait for user
+4. **DO NOT submit - wait for user**
 
-### Phase 5: Report
+### Phase 8: Report
 Generate summary with:
 - Tab index for each application
 - Company, role, compensation
+- **Hiring manager identified**: Yes/No
+- **Outreach draft ready**: Yes/No
 - Cover letter preview
 - Any fields that couldn't be auto-filled
-- Questions requiring custom answers
+
+---
+
+## Output Per Role
+
+Each `applications/pending/{company}_{role}_{date}/` folder contains:
+
+```
+├── notes.md           # JD + company intel + people mapping
+├── cover_letter.md    # Generated cover letter
+├── outreach_draft.md  # Email to champion or hiring manager
+└── responses.md       # Application-specific questions (if any)
+```
+
+---
+
+## The Test
+
+Before proceeding with any role, ask:
+
+> "Could I email someone at this company even if they had no job openings?"
+
+If the answer is "no" - the research isn't done yet.
 
 ---
 
@@ -105,30 +169,31 @@ See: `/anti-ai-writing` skill
 
 ---
 
-## Output
-
-After pre-filling, provide:
+## Final Report Format
 
 ```
 ## Applications Ready for Review
 
-| Tab | Company | Role | Comp | Status |
-|-----|---------|------|------|--------|
-| 1 | Flatiron | Sr SWE Lead | $190-235K | Ready |
-| 2 | Genesis | ML Scientist | Competitive | Ready |
+| Tab | Company | Role | Comp | HM Found | Outreach Ready |
+|-----|---------|------|------|----------|----------------|
+| 1 | Flatiron | Sr SWE Lead | $190-235K | ✓ | ✓ |
+| 2 | Genesis | ML Scientist | Competitive | ✓ | ✓ |
 ...
 
 ### Tab 1: Flatiron Institute
 - URL: [link]
-- Cover letter: [preview first 200 chars]
+- Hiring Manager: [Name, Title]
+- Champion for outreach: [Name] - [why interesting]
+- Cover letter preview: [first 200 chars]
+- Outreach email preview: [first 100 chars]
 - Unfilled fields: None
-- Notes: Workday may have asked for duplicate info
 
 [etc for each tab]
 
 ### Next Steps
-1. Review each tab
-2. Edit any fields as needed
-3. Submit when ready
-4. I'll move to `applications/submitted/` and update history.json
+1. Review outreach drafts - send if genuine interest
+2. Review each application tab
+3. Edit any fields as needed
+4. Submit when ready
+5. Follow up per `/apply` timing guidelines
 ```

@@ -22,19 +22,15 @@ Most AI job tools automate the traditional approach: generate more cover letters
 ```bash
 git clone https://github.com/rhowardstone/AI-Job-Coach.git
 cd AI-Job-Coach
-
 pip install python-jobspy pandas requests
-
-# Optional
-export HUNTER_API_KEY="your_key"  # hunter.io for email verification
-
-cp toolkit/profile_template.json profile.json
-# Create .claude/CLAUDE.md with your profile
-
+./install.sh
+# Edit .claude/CLAUDE.md with your profile
 claude
 ```
 
-**Browser automation** (optional): Install [Playwright MCP](https://github.com/anthropics/anthropic-cookbook/tree/main/misc/mcp_playwright) or similar for form-filling - simply run /plugin once ```claude``` opens, and find Playwright.
+The install script creates the directory structure and copies templates. Edit `.claude/CLAUDE.md` with your name, email, target companies, and preferences before running `claude`.
+
+**Browser automation** (optional): For form-filling, run `/plugin` inside Claude Code and install Playwright.
 
 See [GETTING_STARTED.md](GETTING_STARTED.md) for complete setup guide.
 

@@ -6,6 +6,10 @@ Claude Code skills for relationship-focused job searching, implementing methodol
 
 Online job applications have notoriously low success rates. Research suggests 50-80% of positions are filled through networking and referrals before being publicly posted, with employee referrals accounting for 30-50% of hires despite comprising only 7% of applicants (Wanberg et al., 2020).
 
+## A Different Approach
+
+Most AI job tools automate the traditional approach: generate more cover letters, apply to more positions, faster. This toolkit does the opposite—fewer applications, more relationships. The AI handles research and drafting; you decide whether you could genuinely talk to someone about their work for 20 minutes before reaching out.
+
 ## Practical Framework
 
 1. **Research people** whose work genuinely interests you

@@ -96,7 +96,7 @@ The informational interview—conversations to learn about someone's work rather
 
 Effective outreach follows established principles: reciprocity (offer value first), specificity, and making requests easy to accept or decline.
 
-> Cialdini, R. B. (1984). *Influence: The Psychology of Persuasion*. William Morrow.
+> Cialdini, R. B. (1984). *Influence: The Psychology of Persuasion*. William Morrow. [Internet-Archive](https://ia800203.us.archive.org/33/items/ThePsychologyOfPersuasion/The%20Psychology%20of%20Persuasion.pdf)
 
 ## References
 
@@ -109,4 +109,5 @@ Effective outreach follows established principles: reciprocity (offer value firs
 ## License
 
 MIT
+
 

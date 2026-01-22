@@ -98,16 +98,9 @@ Effective outreach follows established principles: reciprocity (offer value firs
 
 > Cialdini, R. B. (1984). *Influence: The Psychology of Persuasion*. William Morrow. [Internet-Archive](https://ia800203.us.archive.org/33/items/ThePsychologyOfPersuasion/The%20Psychology%20of%20Persuasion.pdf)
 
-## References
-
-1. Granovetter, M. S. (1973). The Strength of Weak Ties. *American Journal of Sociology*, 78(6), 1360-1380.
-2. Spence, M. (1973). Job Market Signaling. *The Quarterly Journal of Economics*, 87(3), 355-374.
-3. Cialdini, R. B. (1984). *Influence: The Psychology of Persuasion*. William Morrow.
-4. Wanberg, C. R., van Hooft, E. A. J., Liu, S., & Csillag, B. (2020). Can job seekers achieve more through networking? *Personnel Psychology*, 73(4), 559-585.
-5. Kanar, A. (2023). Effectiveness of informational interviewing. *The Career Development Quarterly*.
-
 ## License
 
 MIT
+
 
 
